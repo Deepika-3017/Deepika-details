@@ -75,6 +75,8 @@ username : deepika3003
 password : deepika@3003
 
 
+personal git token : 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
+
 
 
 git remote add origin http://10.10.16.125:8929/b96user16/spring-config-repo.git
@@ -90,6 +92,8 @@ git remote add origin http://10.10.16.125:8929/b96user16/spring-boot-testing-rep
 git remote add origin http://10.10.16.125:8929/b96user16/spring-docker-jenkins-repo.git
 
 java -jar jenkins-cli.jar -s http://localhost:8080/ -auth admin:deepu@30  build freestyle-demo -s
+
+git remote add origin http://10.10.16.125:8929/b96user16/eclipse-project.git
 
 
 
