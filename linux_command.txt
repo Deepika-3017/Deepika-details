@@ -1,0 +1,402 @@
+linux commands
+
+DAY 1 PRACTICE 
+
+rps@rps-virtual-machine:~$ pwd
+/home/rps
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates
+Documents  eclipse-workspace  Pictures  snap    Videos
+rps@rps-virtual-machine:~$ mkdir training
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ ls
+rps@rps-virtual-machine:~/training$ cd ..
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ pwd
+/home/rps
+rps@rps-virtual-machine:~$ ls -a
+.              Documents          Music     .sudo_as_admin_successful
+..             .dotnet            .p2       Templates
+.bash_history  Downloads          Pictures  training
+.bash_logout   .eclipse           .pki      Videos
+.bashrc        eclipse-workspace  .profile  .vscode
+.cache         .gnupg             Public
+.config        .java              snap
+Desktop        .local             .ssh
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ vi intro.txt
+rps@rps-virtual-machine:~/training$ cat intro.txt
+hi welcome to wirpo rps training
+good morning
+rps@rps-virtual-machine:~/training$ ls
+intro.txt
+rps@rps-virtual-machine:~/training$ vi abc.txt
+rps@rps-virtual-machine:~/training$ cat abc.txt
+Hello Everyone 
+This is your ubuntu training
+how was the training
+could you please share your feedback with us
+
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  intro.txt
+rps@rps-virtual-machine:~/training$ CD ..
+CD: command not found
+rps@rps-virtual-machine:~/training$ cd ..
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ mkdir wiprotraining
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training   wiprotraining
+rps@rps-virtual-machine:~$ rmdir wiprotraining
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  intro.txt
+rps@rps-virtual-machine:~/training$ deepika.txt
+deepika.txt: command not found
+rps@rps-virtual-machine:~/training$ vi deepika.txt
+rps@rps-virtual-machine:~/training$ cat deepika.txt
+Hello Deepika
+Deepika, Welcome to Wipro training
+This Training wii be very helpful to you deepika
+thank you
+
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  deepika.txt  intro.txt
+rps@rps-virtual-machine:~/training$ cd .
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  deepika.txt  intro.txt
+rps@rps-virtual-machine:~/training$ cd ..
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ pwd
+/home/rps
+rps@rps-virtual-machine:~$ ls abc.txt
+ls: cannot access 'abc.txt': No such file or directory
+rps@rps-virtual-machine:~$ ls training/abc.txt
+training/abc.txt
+rps@rps-virtual-machine:~$ ls ~/training
+abc.txt  deepika.txt  intro.txt
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  deepika.txt  intro.txt
+rps@rps-virtual-machine:~/training$ cp intro.txt to intro1.txt
+cp: target 'intro1.txt' is not a directory
+rps@rps-virtual-machine:~/training$ cp intro.txt to training
+cp: target 'training' is not a directory
+rps@rps-virtual-machine:~/training$ cp intro.txt training
+rps@rps-virtual-machine:~/training$ cat training
+hi welcome to wirpo rps training
+good morning
+rps@rps-virtual-machine:~/training$ cat intro.txt
+hi welcome to wirpo rps training
+good morning
+rps@rps-virtual-machine:~/training$ mv intro.txt introduction.txt
+rps@rps-virtual-machine:~/training$ cat introduction.txt
+hi welcome to wirpo rps training
+good morning
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  deepika.txt  introduction.txt  training
+rps@rps-virtual-machine:~/training$ pwd
+/home/rps/training
+rps@rps-virtual-machine:~/training$ rm intro.txt
+rm: cannot remove 'intro.txt': No such file or directory
+rps@rps-virtual-machine:~/training$ pwd
+/home/rps/training
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  deepika.txt  introduction.txt  training
+rps@rps-virtual-machine:~/training$ cat abc.txt
+Hello Everyone 
+This is your ubuntu training
+how was the training
+could you please share your feedback with us
+
+rps@rps-virtual-machine:~/training$ vi abc.txt
+rps@rps-virtual-machine:~/training$ cat abc.txt
+Hello Everyone 
+This is your ubuntu training
+how was the training
+In this vm you can practice
+You can practice all the commands here 
+some of the commands are listed below
+pwd: it will show the present working directory
+ls: It will list all the files
+mkdir: Using this command you can create a new directory or folder
+rmdir: using this you can remove the directory which has been already created
+cp: this command will help you to copy the file from one document to another
+rm: It will help you to remove the file
+mv: It will help you to move the folder from one to another instead of copying
+cd: it will show the current directory
+could you please share your feedback with us
+If you have any queried you can write back to us
+rps@rps-virtual-machine:~/training$ less abc.txt
+rps@rps-virtual-machine:~/training$ head abc.txt
+Hello Everyone 
+This is your ubuntu training
+how was the training
+In this vm you can practice
+You can practice all the commands here 
+some of the commands are listed below
+pwd: it will show the present working directory
+ls: It will list all the files
+mkdir: Using this command you can create a new directory or folder
+rmdir: using this you can remove the directory which has been already created
+rps@rps-virtual-machine:~/training$ tail abc.txt
+pwd: it will show the present working directory
+ls: It will list all the files
+mkdir: Using this command you can create a new directory or folder
+rmdir: using this you can remove the directory which has been already created
+cp: this command will help you to copy the file from one document to another
+rm: It will help you to remove the file
+mv: It will help you to move the folder from one to another instead of copying
+cd: it will show the current directory
+could you please share your feedback with us
+If you have any queried you can write back to us
+rps@rps-virtual-machine:~/training$ less abc.txt
+rps@rps-virtual-machine:~/training$ grep will abc.txt
+pwd: it will show the present working directory
+ls: It will list all the files
+cp: this command will help you to copy the file from one document to another
+rm: It will help you to remove the file
+mv: It will help you to move the folder from one to another instead of copying
+cd: it will show the current directory
+rps@rps-virtual-machine:~/training$ grep -i will abc.txt
+pwd: it will show the present working directory
+ls: It will list all the files
+cp: this command will help you to copy the file from one document to another
+rm: It will help you to remove the file
+mv: It will help you to move the folder from one to another instead of copying
+cd: it will show the current directory
+rps@rps-virtual-machine:~/training$ grep -i 'Hello everyone' abc.txt
+Hello Everyone 
+rps@rps-virtual-machine:~/training$ grep -ivc will abc.txt
+10
+rps@rps-virtual-machine:~/training$ wc -w abc.txt
+137 abc.txt
+rps@rps-virtual-machine:~/training$ we abc.txt
+Command 'we' not found, but can be installed with:
+sudo apt install xwpe
+rps@rps-virtual-machine:~/training$ wc abc.txt
+ 16 137 725 abc.txt
+rps@rps-virtual-machine:~/training$ wc -l abc.txt
+16 abc.txt
+rps@rps-virtual-machine:~/training$ wc -c abc.txt
+725 abc.txt
+rps@rps-virtual-machine:~/training$ grep -ic will abc.txt
+6
+rps@rps-virtual-machine:~/training$ grep -iv will abc.txt
+Hello Everyone 
+This is your ubuntu training
+how was the training
+In this vm you can practice
+You can practice all the commands here 
+some of the commands are listed below
+mkdir: Using this command you can create a new directory or folder
+rmdir: using this you can remove the directory which has been already created
+could you please share your feedback with us
+If you have any queried you can write back to us
+rps@rps-virtual-machine:~/training$ vi deepika.txt
+rps@rps-virtual-machine:~/training$ vi deepika.txt
+rps@rps-virtual-machine:~/training$ vi deepika.txt
+rps@rps-virtual-machine:~/training$ vi deepika.txt
+rps@rps-virtual-machine:~/training$ vi deepika.txt
+rps@rps-virtual-machine:~/training$ ls
+abc.txt  deepika.txt  introduction.txt  training
+rps@rps-virtual-machine:~/training$ ls -l
+total 16
+-rw-rw-r-- 1 rps rps 725 May 15 13:00 abc.txt
+-rw-rw-r-- 1 rps rps 108 May 15 14:04 deepika.txt
+-rw-rw-r-- 1 rps rps  46 May 15 11:56 introduction.txt
+-rw-rw-r-- 1 rps rps  46 May 15 12:48 training
+rps@rps-virtual-machine:~/training$ pwd
+/home/rps/training
+rps@rps-virtual-machine:~/training$ cd ..
+rps@rps-virtual-machine:~$ ls
+Desktop    Downloads          Music     Public  Templates  Videos
+Documents  eclipse-workspace  Pictures  snap    training
+rps@rps-virtual-machine:~$ 
+rps@rps-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 2 rps rps 4096 May  2 17:26 Desktop
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Documents
+drwxr-xr-x 4 rps rps 4096 May 10 11:40 Downloads
+drwxrwxr-x 3 rps rps 4096 May  9 17:03 eclipse-workspace
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Music
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Pictures
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Public
+drwx------ 8 rps rps 4096 May  9 17:08 snap
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Templates
+drwxrwxr-x 2 rps rps 4096 May 15 14:04 training
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Videos
+rps@rps-virtual-machine:~$ ls -a
+.              .config    eclipse-workspace  .p2       .ssh                       .vscode
+..             Desktop    .gnupg             Pictures  .sudo_as_admin_successful
+.bash_history  Documents  .java              .pki      Templates
+.bash_logout   .dotnet    .lesshst           .profile  training
+.bashrc        Downloads  .local             Public    Videos
+.cache         .eclipse   Music              snap      .viminfo
+rps@rps-virtual-machine:~$ man cat
+rps@rps-virtual-machine:~$ ls -l
+total 44
+drwxr-xr-x 2 rps rps 4096 May  2 17:26 Desktop
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Documents
+drwxr-xr-x 4 rps rps 4096 May 10 11:40 Downloads
+drwxrwxr-x 3 rps rps 4096 May  9 17:03 eclipse-workspace
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Music
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Pictures
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Public
+drwx------ 8 rps rps 4096 May  9 17:08 snap
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Templates
+drwxrwxr-x 2 rps rps 4096 May 15 14:04 training
+drwxr-xr-x 2 rps rps 4096 Mar 16  2023 Videos
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ ls -l
+total 16
+-rw-rw-r-- 1 rps rps 725 May 15 13:00 abc.txt
+-rw-rw-r-- 1 rps rps 108 May 15 14:04 deepika.txt
+-rw-rw-r-- 1 rps rps  46 May 15 11:56 introduction.txt
+-rw-rw-r-- 1 rps rps  46 May 15 12:48 training
+rps@rps-virtual-machine:~/training$ chmod a+rwx abc.txt
+rps@rps-virtual-machine:~/training$ ls -l
+total 16
+-rwxrwxrwx 1 rps rps 725 May 15 13:00 abc.txt
+-rw-rw-r-- 1 rps rps 108 May 15 14:04 deepika.txt
+-rw-rw-r-- 1 rps rps  46 May 15 11:56 introduction.txt
+-rw-rw-r-- 1 rps rps  46 May 15 12:48 training
+rps@rps-virtual-machine:~/training$ chmod go-rwx abc.txt
+rps@rps-virtual-machine:~/training$ ls -l
+total 16
+-rwx------ 1 rps rps 725 May 15 13:00 abc.txt
+-rw-rw-r-- 1 rps rps 108 May 15 14:04 deepika.txt
+-rw-rw-r-- 1 rps rps  46 May 15 11:56 introduction.txt
+-rw-rw-r-- 1 rps rps  46 May 15 12:48 training
+rps@rps-virtual-machine:~/training$ ps
+    PID TTY          TIME CMD
+   9802 pts/0    00:00:00 bash
+  10304 pts/0    00:00:00 ps
+rps@rps-virtual-machine:~/training$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs            1636832     1680   1635152   1% /run
+/dev/sda3      204793864 20355924 173962216  11% /
+tmpfs            8184152        0   8184152   0% /dev/shm
+tmpfs               5120        0      5120   0% /run/lock
+/dev/sda2         524252     6220    518032   2% /boot/efi
+tmpfs            1636828      116   1636712   1% /run/user/1000
+rps@rps-virtual-machine:~/training$ du
+20	.
+rps@rps-virtual-machine:~/training$ date
+Wednesday 15 May 2024 04:19:32 PM IST
+rps@rps-virtual-machine:~/training$ time
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+rps@rps-virtual-machine:~/training$ ^C
+rps@rps-virtual-machine:~/training$ cd training
+bash: cd: training: Not a directory
+rps@rps-virtual-machine:~/training$ cd ..
+rps@rps-virtual-machine:~$ pwd
+/home/rps
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ pwd
+/home/rps/training
+rps@rps-virtual-machine:~/training$ vi linux_command.txt
+rps@rps-virtual-machine:~/training$ cat linux_command.txt
+linux commands
+rps@rps-virtual-machine:~/training$ ^C
+rps@rps-virtual-machine:~/training$ ^C
+rps@rps-virtual-machine:~/training$ 
+
+rps@rps-virtual-machine:~$ pwd
+/home/rps
+rps@rps-virtual-machine:~$ cd training
+rps@rps-virtual-machine:~/training$ cat list1
+cat: list1: No such file or directory
+rps@rps-virtual-machine:~/training$ cat > list1
+mango
+banana
+grapes
+apple
+rps@rps-virtual-machine:~/training$ cat list1
+mango
+banana
+grapes
+apple
+rps@rps-virtual-machine:~/training$ cat >> list1
+pulm
+orange
+watermelon
+rps@rps-virtual-machine:~/training$ cat list1
+mango
+banana
+grapes
+apple
+pulm
+orange
+watermelon
+rps@rps-virtual-machine:~/training$ sort
+mango
+banana
+orange   
+banana
+mango
+orange
+rps@rps-virtual-machine:~/training$ sort
+rps@rps-virtual-machine:~/training$ sort list1
+apple
+banana
+grapes
+mango
+orange
+pulm
+watermelon
+rps@rps-virtual-machine:~/training$ sort <list1
+apple
+banana
+grapes
+mango
+orange
+pulm
+watermelon
+rps@rps-virtual-machine:~/training$ sort > list1
+rps@rps-virtual-machine:~/training$ ls *list
+ls: cannot access '*list': No such file or directory
+rps@rps-virtual-machine:~/training$ ls list1*
+list1
+rps@rps-virtual-machine:~/training$ ls -l
+total 32
+-rwx------ 1 rps rps   725 May 15 13:00 abc.txt
+-rw-rw-r-- 1 rps rps   108 May 15 14:04 deepika.txt
+-rw-rw-r-- 1 rps rps    46 May 15 11:56 introduction.txt
+-rw-rw-r-- 1 rps rps 13458 May 15 16:28 linux_command.txt
+-rw-rw-r-- 1 rps rps     0 May 15 16:46 list1
+-rw-rw-r-- 1 rps rps    46 May 15 12:48 training
+rps@rps-virtual-machine:~/training$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs            1636832     1676   1635156   1% /run
+/dev/sda3      204793864 20375248 173942892  11% /
+tmpfs            8184152        0   8184152   0% /dev/shm
+tmpfs               5120        0      5120   0% /run/lock
+/dev/sda2         524252     6220    518032   2% /boot/efi
+tmpfs            1636828      120   1636708   1% /run/user/1000
+rps@rps-virtual-machine:~/training$ du
+36	.
+rps@rps-virtual-machine:~/training$ du -h
+36K	.
+
