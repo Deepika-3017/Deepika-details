@@ -1,0 +1,285 @@
+select * from tab;
+
+create table wiproemployee(id number primary key, name varchar(10), email varchar(20));
+
+desc wiproemployee;
+
+insert into wiproemployee values(1, 'user1', 'user1@wipro.com');
+
+select * from wiproemployee;
+
+insert into wiproemployee(id) values(2);
+
+insert into wiproemployee(id, name) values(3,'user1');
+
+insert into wiproemployee(id, email) values(4,'user1@wipro.com');
+
+insert into wiproemployee values(5,'user5',null);
+
+create table wemp as select * from wiproemployee;
+
+desc wemp;
+
+select * from wemp; 
+
+create table wemp1(id number primary key, name varchar(20) not null, email varchar(20) not null, mobile varchar(10) unique);
+
+show tables;
+
+insert into wemp1 values(101,'user101','user101@wipro.com',9876543210);
+
+insert into wemp1 values(102,'user101','user101@wipro.com',9087654321);
+
+insert into wemp1 values(103,'user103','user103@wipro.com',9987654321);
+
+select * from wemp1;
+
+alter table wemp1 add sal number;
+
+select * from wemp1;
+
+update wemp1 set sal=10000;
+
+update wemp1 set sal=20000 where id=102;
+
+update wemp1 set sal=sal+20000 where id=103;
+
+select * from wemp1;
+
+alter table wemp1 modify sal number(10); 
+
+alter table wemp1 add dept number(2);
+
+alter table wemp1 modify dept number(5);
+
+alter table wemp1 rename column dept to department;
+
+alter table wemp1 add(city varchar(10),state varchar(10));
+
+desc wemp1;
+
+alter table wemp1 drop column state;
+
+create table wiproemployee1 as select * from wiproemployee;
+
+desc wiproemployee1;
+
+truncate table wiproemployee;
+
+select * from wiproemployee;
+
+drop table wiproemployee;
+
+desc wiproemployee;
+
+select * from tab;
+
+select * from wemp1;
+
+select * from wemp1 where id=102;
+
+create index indexname on wemp1(name);
+
+create index i1 on wemp1(email);
+
+select * from wemp1 where email='user106@wipro.com';
+
+drop index i1;
+
+//DML
+
+insert into wemp1 values(104,'user104','user104@wipro.com',9876543432,20000,10,'honnavar');
+
+insert into wemp1 values(105,'user105','user105@wipro.com',9876543422,30000,20,'mangalore');
+
+insert into wemp1 values(106,'user106','user106@wipro.com',9876543132,30000,30,'mumbai');
+
+select * from wemp1;
+
+update wemp1 set department =20 where id =102;
+
+update wemp1 set department=25,city='bengaluru' where id=101 or id=103;
+
+delete from wemp1 where id=103 or city='bengaluru';
+
+create table student(id number primary key, name varchar(10), marks number check(marks<100));
+
+insert into student values(1,'student1',100); // will get error bcz check constraint violated
+
+insert into student values(1,'student1',99);
+
+select * from student;
+
+create table dept (did number primary key, dname varchar(20));
+
+insert into dept values(10,'IT');
+
+insert into dept values(20,'INFRA');
+
+insert into dept values(30,'ADMIN');
+
+select * from dept;
+
+create table empw(eid number primary key,name varchar(10),did references dept(did));
+
+insert into empw values(101,'Deepika',30);
+insert into empw values(102,'Priyanka',30);
+insert into empw values(103,'Aishwarya',30);
+insert into empw values(104,'Punya',20);
+insert into empw values(105,'Niveditha',20);
+insert into empw values(106,'Deepshika',10);
+insert into empw values(107,'Pushpaka',20);
+
+select * from empw;
+select e.eid,e.name,d.did,d.dname from empw e,dept d where e.did=d.did;
+
+
+
+
+DAY 2
+
+
+select * from wemp1;
+
+update wemp1 set city='honnavar' where id=102;
+
+select id, name, city from wemp1;
+
+select id,name,email from wemp1;
+
+select id,name ,sal+500,sal*100 from wemp1;
+
+select name,lower(name),upper(name),length(name) from wemp1;
+
+select * from wemp1 where not id<=184;
+
+select * from wemp1 where id<=184;
+
+select * from wemp1 where not id=104 or id=106;
+
+select * from wemp1 where id not in(103,106);
+
+select * from dept;
+
+select * from dept where dname not like 'IT';
+
+select * from dept where did between 10 and 20;
+
+select sum(sal) from wemp1;
+
+select sal from wemp1;
+
+select avg(sal) from wemp1;
+
+select max(sal) from wemp1;
+
+select min(sal) from wemp1;
+
+select sum(sal) from wemp1 group by department;
+
+select department,sum(sal) from wemp1 group by department;
+
+select name,sum(sal) from wemp1 group by name;
+
+select name, sal from wemp1;
+
+select city,avg(sal) from wemp1 group by city;
+
+select city,count(sal) from wemp1 group by city;
+
+select name,email, case when department = 25 then 'T3' when department = 10 then 'T4' else 'TT' end as EmployeeBand from wemp1;
+
+
+
+Day 3:
+
+
+SELECT CURRENT_DATE FROM DUAL;
+
+SELECT EXTRACT(DAY FROM CURRENT_DATE) FROM DUAL;
+
+
+create table coursew1(cid number primary key, cname varchar(10),duration number(2));
+
+create table studentw1(sid number primary key, sname varchar(20), dob date, cid number references coursew1(cid));
+
+insert into coursew1 values(1,'Java',3);
+
+insert into coursew1 values(2,'Oracle',5);
+
+insert into coursew1 values(3,'Spring',4);
+
+insert into coursew1 values(4,'html',3);
+
+insert into coursew1 values(5,'rest',3);
+
+select * from cousew1;
+
+insert into studentw1 values(101,'Deepika','09-MAR-2001',2);
+
+insert into studentw1 values(102,'Kiran','09-MAR-2001',1);
+
+insert into studentw1 values(103,'Rahul','09-MAR-2001',3);
+
+insert into studentw1 values(104,'Aishu','09-MAR-2001',null);
+
+insert into studentw1 values(105,'Adil','09-MAR-2001',null);
+
+insert into studentw1 values(106,'Pundu','09-MAR-2001',null);
+
+select * from studentw1;
+
+select s.sid,s.sname,s.dob,c.cid,c.cname,c.duration from studentw1 s inner join coursew1 c on s.cid=c.cid;
+
+select s.sid,s.sname,s.dob,c.cid,c.cname,c.duration from studentw1 s left outer join coursew1 c on s.cid=c.cid;
+
+select s.sid,s.sname,s.dob,c.cid,c.cname,c.duration from studentw1 s right outer join coursew1 c on s.cid=c.cid;
+
+select s.sid,s.sname,s.dob,c.cid,c.cname,c.duration from studentw1 s full outer join coursew1 c on s.cid=c.cid;
+
+select s.sid,s.sname,s.dob,c.cid,c.cname,c.duration from studentw1 s, coursew1 c;
+
+select rownum,sid,sname from studentw1;
+
+select department, sum(sal) from wemp1 group by department;
+
+select * from wemp1;
+
+select department, sum(sal) from wemp1 group by department having department=20;
+
+select * from wemp1 order by city desc;
+
+select * from studentw1;
+
+create table studentw2 as select * from studentw1;
+
+update studentw2 set sname='Priya' where sid=106;
+
+select * from studentw2;
+
+select * from studentw1 union select * from studentw2;
+
+select * from studentw1 union all select * from studentw2;
+
+select * from studentw1 intersect select * from studentw2;
+
+select * from studentw1 minus select * from studentw2;
+
+create table empself(eid number primary key, name varchar(20), mid number);
+
+insert into empself values(1,'Deepika',2);
+
+insert into empself values(2,'Priya',1);
+
+insert into empself values(3,'kiran',2);
+
+insert into empself values(4,'Aishu',1);
+
+insert into empself values(5,'Rahul',2);
+
+insert into empself values(6,'Sanky',1);
+
+select * from empself;
+
+select e.eid managerid,e.name manager,m.name employeeName from empself e join empself m on e.eid=m.mid; 
+

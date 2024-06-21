@@ -1,0 +1,96 @@
+Git
+
+http://10.10.16.125:8929/b96user16/wiproproject_deepikanaik
+
+http://10.10.16.125:8929/
+
+b96user16@rpsconsulting.in
+
+b96user16
+
+Deepu@3003
+
+git init
+
+git remote add url
+
+git add .
+
+git commit -m "initial commit"
+
+git push origin master
+
+remove .git in folder
+
+open the folder in terminal
+
+git init
+
+git add filename
+
+git commit -m "First commit"
+
+git push -u origin master
+
+if we encounter an error like failed to push then
+
+git pull --rebase origin master
+
+git push -u origin master
+
+git status
+
+git reflog
+
+
+
+
+JENKINS
+http://localhost:8080/
+password : a464215266bb4eec8641e71bc4426610
+user : admin
+new password : deepu@30
+
+
+
+PORTAINER 
+http://localhost:9050/#!/auth
+portainer: user : admin
+password : admin@123456
+
+
+
+SONARQUBE
+http://localhost:9000/projects
+username : admin
+password: deepu@30
+
+token name:mysonartoken
+squ_0bffc6f00dd58a659b5fa5c6606a192f6612c799
+
+
+DOCKER
+https://hub.docker.com/
+username : deepika3003
+password : deepika@3003
+
+
+
+
+git remote add origin http://10.10.16.125:8929/b96user16/spring-config-repo.git
+
+git remote add origin http://10.10.16.125:8929/b96user16/sample-java-jenkins-repo.git
+
+git remote add origin http://10.10.16.125:8929/b96user16/spring-boot-jpa-repo.git
+
+git remote add origin http://10.10.16.125:8929/b96user16/spring-boot-test-repo.git
+
+git remote add origin http://10.10.16.125:8929/b96user16/spring-boot-testing-repo.git
+
+git remote add origin http://10.10.16.125:8929/b96user16/spring-docker-jenkins-repo.git
+
+java -jar jenkins-cli.jar -s http://localhost:8080/ -auth admin:deepu@30  build freestyle-demo -s
+
+
+
+
